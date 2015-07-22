@@ -36,7 +36,10 @@ $di->setShared('view', function () use ($config) {
     $view = new View();
 
     $view->setViewsDir($config->application->viewsDir);
-
+    /*Agregado para que todas las paginas utilicen el mismo menu*/
+    $view->setLayoutsDir('layouts/');
+    $view->setTemplateBefore('main');
+    /*fin*/
     $view->registerEngines(array(
         '.volt' => function ($view, $di) use ($config) {
 
@@ -46,7 +49,8 @@ $di->setShared('view', function () use ($config) {
                 'compiledPath' => $config->application->cacheDir,
                 'compiledSeparator' => '_'
             ));
-
+            $compiler = $volt->getCompiler();
+            $compiler->addFunction('is_a', 'is_a');
             return $volt;
         },
         '.phtml' => 'Phalcon\Mvc\View\Engine\Php'
@@ -77,4 +81,16 @@ $di->setShared('session', function () {
     $session->start();
 
     return $session;
+});
+/**
+ * podemos añadir clases personalizadas a los mensajes flash de esta forma
+ */
+$di->set('flash', function()
+{
+    return new Phalcon\Flash\Direct(array(
+        'error'     => 'alert alert-danger',
+        'success'   => 'alert alert-success',
+        'notice'    => 'alert alert-info',
+        'warning'   => 'alert alert-warning',
+    ));
 });
