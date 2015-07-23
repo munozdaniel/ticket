@@ -2,8 +2,10 @@
 
 
 {% block script_footer %}
-    {{ javascript_include('assets/js/sparkline-chart.js') }}
-    {{ javascript_include('assets/js/zabuto_calendar.js') }}
+
+
+    <script src="assets/js/sparkline-chart.js"></script>
+    <script src="assets/js/zabuto_calendar.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {

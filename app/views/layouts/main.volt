@@ -9,7 +9,7 @@
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo"><b>DASHGUM FREE</b></a>
+        <a href="index.html" class="logo"><b>GESTOR DE TICKET</b></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
             <!--  notification start -->
@@ -168,79 +168,63 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                <h5 class="centered">Marcel Newman</h5>
+                <p class="centered">
+                    <a href="profile.html">
+                        {{ image("assets/img/ui-sam.jpg", "alt": "banner de phalcon", "class":"img-circle", "width":"60") }}
+                    </a>
+                </p>
+                <h5 class="centered">Nombre Apellido</h5>
 
                 <li class="mt">
                     <a class="active" href="index.html">
                         <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
+                        <span>Inicio</span>
                     </a>
                 </li>
 
                 <li class="sub-menu">
                     <a href="javascript:;" >
                         <i class="fa fa-desktop"></i>
-                        <span>UI Elements</span>
+                        <span>Ticket</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="general.html">General</a></li>
-                        <li><a  href="buttons.html">Buttons</a></li>
-                        <li><a  href="panels.html">Panels</a></li>
-                    </ul>
-                </li>
-
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-cogs"></i>
-                        <span>Components</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="calendar.html">Calendar</a></li>
-                        <li><a  href="gallery.html">Gallery</a></li>
-                        <li><a  href="todo_list.html">Todo List</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-book"></i>
-                        <span>Extra Pages</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="blank.html">Blank Page</a></li>
-                        <li><a  href="login.html">Login</a></li>
-                        <li><a  href="lock_screen.html">Lock Screen</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Forms</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="form_component.html">Form Components</a></li>
+                        <li><a  href="general.html">Todos</a></li>
+                        <li><a  href="buttons.html">Pendientes</a></li>
+                        <li><a  href="panels.html">Resueltos</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" >
                         <i class="fa fa-th"></i>
-                        <span>Data Tables</span>
+                        <span>Busqueda</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="basic_table.html">Basic Table</a></li>
-                        <li><a  href="responsive_table.html">Responsive Table</a></li>
+                        <li><a  href="basic_table.html">Por Tecnico</a></li>
+                        <li><a  href="responsive_table.html">Por Fechas</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" >
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Charts</span>
+                        <i class="fa fa-cogs"></i>
+                        <span>Configuración</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="morris.html">Morris</a></li>
-                        <li><a  href="chartjs.html">Chartjs</a></li>
+                        <li><a  href="calendar.html">Usuario</a></li>
+                        <li><a  href="gallery.html">Correo</a></li>
+                        <li><a  href="todo_list.html">Otros</a></li>
                     </ul>
                 </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" >
+                        <i class="fa fa-book"></i>
+                        <span>Ayuda</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="blank.html">Manual</a></li>
+                        <li><a  href="login.html">Consejos</a></li>
+                    </ul>
+                </li>
+
 
             </ul>
             <!-- sidebar menu end-->
