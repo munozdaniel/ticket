@@ -32,10 +32,9 @@
         {% endblock %}
     </head>
     <body>
+    {{ content() }}
 
-
-
-        <!-- Los siguientes JS se agregan al final para que la página carge más rápido. -->
+    <!-- Los siguientes JS se agregan al final para que la página carge más rápido. -->
         {{ javascript_include('assets/js/jquery.js') }}
         {{ javascript_include('assets/js/jquery-1.8.3.min.js') }}
         {{ javascript_include('assets/js/bootstrap.min.js') }}
@@ -51,11 +50,14 @@
         {{ javascript_include('assets/js/gritter/js/jquery.gritter.js') }}
         {{ javascript_include('assets/js/gritter-conf.js') }}
 
-        {{ content() }}
+
         <!--Script Particular de cada página -->
         {% block script_footer %}
 
+
+
         {% endblock %}
+
 
     </body>
 </html>
