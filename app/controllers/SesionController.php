@@ -37,17 +37,12 @@ class SesionController extends ControllerBase
                     $miSesion = $this->session->get('auth');
                     $this->flash->success('Bienvenido '.$miSesion['nombre']);
                     //Redireccionar la ejecución si el usuario es valido
-                    return $this->dispatcher->forward(array(
-                        'controller' => 'index',
-                        'action' => 'index'
-                    ));
+                    return $this->redireccionar('index/index');
+
                 }
                 else{
                     $this->flash->error("No se encontro el Usuario, verifique contraseña/nick");
-                    return $this->dispatcher->forward(array(
-                        'controller' => 'sesion',
-                        'action' => 'index'
-                    ));
+
                 }
             }
             catch(\Phalcon\Annotations\Exception $ex)
@@ -56,12 +51,7 @@ class SesionController extends ControllerBase
             }
 
         }
-        //return $this->forward('sesion/index');
-        //Redireccionar la ejecución si el usuario es valido
-        return $this->dispatcher->forward(array(
-            'controller' => 'sesion',
-            'action' => 'index'
-        ));
+        $this->redireccionar('sesion/index');
 
     }
     private function _registrarSesion($usuario)
