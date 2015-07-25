@@ -153,7 +153,9 @@
         </div>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.html">Logout</a></li>
+                <li>
+                    {{ link_to("sesion", 'Login','class':'logout')}}
+                </li>
             </ul>
         </div>
     </header>
@@ -238,10 +240,8 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> PAGINA EN BLANCO</h3>
             <div class="row mt">
                 <div class="col-lg-12">
-                    <p>Contenido:</p>
                     {{ content() }}
                 </div>
             </div>
@@ -253,7 +253,7 @@
     <!--footer start-->
     <footer class="site-footer">
         <div class="text-center">
-            2014 - Alvarez.is
+            2015 - Daniel Muñoz.
             <a href="index.html#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>

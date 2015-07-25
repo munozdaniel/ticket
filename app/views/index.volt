@@ -29,11 +29,11 @@
     {{ content() }}
 
     <!-- Los siguientes JS se agregan al final para que la página carge más rápido. -->
-        {{ javascript_include('assets/js/jquery.js') }}
         {{ javascript_include('assets/js/bootstrap.min.js') }}
         {{ javascript_include('assets/js/jquery-ui-1.9.2.custom.min.js') }}
         {{ javascript_include('assets/js/jquery.ui.touch-punch.min.js') }}
-        <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    {{ javascript_include('assets/js/jquery.dcjqaccordion.2.7.js') }}
+
     {{ javascript_include('assets/js/jquery.scrollTo.min.js') }}
     {{ javascript_include('assets/js/jquery.nicescroll.js') }}
 
@@ -42,11 +42,12 @@
         {{ javascript_include('assets/js/common-scripts.js') }}
 
         <!--Script Particular de cada página -->
-        {% block script_footer %}
+
+    {% block script_footer %}
 
 
-        {% endblock %}
 
+    {% endblock %}
 
     </body>
 </html>
