@@ -74,7 +74,7 @@ class SesionController extends ControllerBase
      *
      * @return unknown
      */
-    public function endAction()
+    public function cerrarAction()
     {
         $this->session->remove('auth');
         $this->flash->success('Goodbye!');

@@ -152,11 +152,13 @@
             <!--  notification end -->
         </div>
         <div class="top-menu">
-            <ul class="nav pull-right top-menu">
+           <!-- <ul class="nav pull-right top-menu">
                 <li>
                     {{ link_to("sesion", 'Login','class':'logout')}}
                 </li>
             </ul>
+            -->
+            {{ componentes.getSesion() }}
         </div>
     </header>
     <!--header end-->

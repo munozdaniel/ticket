@@ -11,10 +11,11 @@ class IndexController extends ControllerBase
     {
         //cargar los js para la vista de esta función
 
-        $this->assets->addInlineJs('//custom select box
+       /* $this->assets->addInlineJs('//custom select box
         $(function(){
             $("select.styled").customSelect();
         });');
+    */
     }
 
 }

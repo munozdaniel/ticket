@@ -94,3 +94,9 @@ $di->set('flash', function()
         'warning'   => 'alert alert-warning',
     ));
 });
+/**
+ * Registrando componentes de usuarios
+ */
+$di->set('componentes', function(){
+    return new Elemento();
+});
