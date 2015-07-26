@@ -26,9 +26,11 @@
         {% endblock %}
     </head>
     <body>
+
     {{ content() }}
 
     <!-- Los siguientes JS se agregan al final para que la página carge más rápido. -->
+    {{ javascript_include('assets/js/jquery.js') }}
         {{ javascript_include('assets/js/bootstrap.min.js') }}
         {{ javascript_include('assets/js/jquery-ui-1.9.2.custom.min.js') }}
         {{ javascript_include('assets/js/jquery.ui.touch-punch.min.js') }}
@@ -42,12 +44,9 @@
         {{ javascript_include('assets/js/common-scripts.js') }}
 
         <!--Script Particular de cada página -->
-
-    {% block script_footer %}
-
-
-
-    {% endblock %}
+    {{ this.assets.outputJs() }}
+    {{ assets.outputInlineJs() }}
+    {% block footer  %}{% endblock %}
 
     </body>
 </html>

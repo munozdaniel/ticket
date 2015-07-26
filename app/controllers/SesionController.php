@@ -9,7 +9,10 @@ class SesionController extends ControllerBase
     }
     public function indexAction()
     {
-
+        //cargar los js para la vista de esta función
+        $this->assets
+            ->addJs('assets/js/jquery.backstretch.min.js');
+        $this->assets->addInlineJs('$.backstretch("assets/img/login-bg.jpg", {speed: 500});');
     }
 
     /**
@@ -18,6 +21,8 @@ class SesionController extends ControllerBase
      */
     public function validarAction()
     {
+
+
         if($this->request->isPost())
         {
             try
@@ -51,7 +56,7 @@ class SesionController extends ControllerBase
             }
 
         }
-        $this->redireccionar('sesion/index');
+        return $this->redireccionar('sesion/index');
 
     }
     private function _registrarSesion($usuario)

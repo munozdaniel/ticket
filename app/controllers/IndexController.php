@@ -9,7 +9,12 @@ class IndexController extends ControllerBase
     }
     public function indexAction()
     {
+        //cargar los js para la vista de esta función
 
+        $this->assets->addInlineJs('//custom select box
+        $(function(){
+            $("select.styled").customSelect();
+        });');
     }
 
 }
