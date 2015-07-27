@@ -81,15 +81,15 @@ class Elemento extends Component
             echo    "<li class='sub-menu'>";
 
             echo $this->tag->linkTo(array("javascript:;","<i class='".$contenido['icono']."'></i><span>".$contenido['leyenda']."</span>"));//Verificar que este activo
-            foreach($contenido['submenu'] as $submenu => $item)
+            foreach($contenido['submenu'] as $submenu => $item)//contenido[leyenda], contenido[icono], contenido[submenu]
             {
-                //contenido[leyenda], contenido[icono], contenido[submenu]
-
-                $clase = (($item['controlador']==$controllerName)?"active":"");
-
-                echo        "<ul class='sub'>";
-                echo "<li>".$this->tag->linkTo(array($item['controlador']."/".$item['accion'],$item['leyenda'],"class"=>$clase))."</li>";
-                echo    "</ul>";
+                //Verificando que accion se encuentra activa.
+                $actionName = $this->view->getActionName();
+                $clase = (($item['accion']==$actionName)?"class=active":"");
+                
+                echo  "<ul class='sub'>";
+                echo  "<li $clase>".$this->tag->linkTo(array($item['controlador']."/".$item['accion'],$item['leyenda']))."</li>";
+                echo  "</ul>";
             }
 
             echo    "</li>";
