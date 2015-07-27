@@ -40,7 +40,7 @@ class SesionController extends ControllerBase
                 {
                     $this->_registrarSesion($usuario);
                     $miSesion = $this->session->get('auth');
-                    $this->flash->success('Bienvenido '.$miSesion['nombre']);
+                    $this->flash->success('Bienvenido '.$miSesion['usuario_nombre']);
                     //Redireccionar la ejecución si el usuario es valido
                     return $this->redireccionar('index/index');
 
@@ -64,10 +64,10 @@ class SesionController extends ControllerBase
         $idRol = Usuarioporrol::findFirst(array("usuario_id     =       :usuario:",
                                                 'bind'          =>      array('usuario'=>$usuario->usuario_id)));
         $rol = Rol::findFirstByRolId($idRol->rol_id);
-        $this->session->set('auth',array('id'   =>  $usuario->usuario_id,
-                                        'nombre'  =>  $usuario->usuario_nombre,
-                                        'nick'  =>  $usuario->usuario_nick,
-                                        'rol'   =>  $rol->rol_descripcion));
+        $this->session->set('auth',array('usuario_id'   =>  $usuario->usuario_id,
+                                        'usuario_nombre'  =>  $usuario->usuario_nombre,
+                                        'usuario_nick'  =>  $usuario->usuario_nick,
+                                        'rol_descripcion'   =>  $rol->rol_descripcion));
     }
     /**
      * Finishes the active session redirecting to the index

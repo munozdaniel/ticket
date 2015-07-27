@@ -152,7 +152,7 @@
             <!--  notification end -->
         </div>
         <div class="top-menu">
-           <!-- <ul class="nav pull-right top-menu">
+            <!-- <ul class="nav pull-right top-menu">
                 <li>
                     {{ link_to("sesion", 'Login','class':'logout')}}
                 </li>
@@ -172,63 +172,9 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered">
-                    <a href="profile.html">
-                        {{ image("assets/img/ui-sam.jpg", "alt": "banner de phalcon", "class":"img-circle", "width":"60") }}
-                    </a>
-                </p>
-                <h5 class="centered">Nombre Apellido</h5>
+                {{ componentes.getUsuario() }}
 
-                <li class="mt">
-                    <a class="active" href="index.html">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Inicio</span>
-                    </a>
-                </li>
-
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-desktop"></i>
-                        <span>Ticket</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="general.html">Todos</a></li>
-                        <li><a  href="buttons.html">Pendientes</a></li>
-                        <li><a  href="panels.html">Resueltos</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-th"></i>
-                        <span>Busqueda</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="basic_table.html">Por Tecnico</a></li>
-                        <li><a  href="responsive_table.html">Por Fechas</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-cogs"></i>
-                        <span>Configuración</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="calendar.html">Usuario</a></li>
-                        <li><a  href="gallery.html">Correo</a></li>
-                        <li><a  href="todo_list.html">Otros</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-book"></i>
-                        <span>Ayuda</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="blank.html">Manual</a></li>
-                        <li><a  href="login.html">Consejos</a></li>
-                    </ul>
-                </li>
-
+                {{ componentes.getMenu() }}
 
             </ul>
             <!-- sidebar menu end-->
