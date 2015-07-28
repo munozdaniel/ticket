@@ -78,17 +78,12 @@ class Seguridad extends \Phalcon\Mvc\User\Plugin
             //----------------------------ROLES-----------------------------------
 
             //registramos los roles que deseamos tener en nuestra aplicación****
-            $roles = array(
-                'admin' 		=> new Phalcon\Acl\Role('Admin'),
-                'registered' 	=> new Phalcon\Acl\Role('Registered'),
-                'guest' 		=> new Phalcon\Acl\Role('Guest')
-            );
-
-            //añadimos los roles al acl
-            foreach ($roles as $role)
+            $listaRoles = Rol::find();
+            foreach($listaRoles as $rol)
             {
-                $acl->addRole($role);
+                $acl->addRole(new \Phalcon\Acl\Role($rol->rol_descripcion));
             }
+
             //---------------------------------------------------------------
             //----------------------------PAGINAS-----------------------------------
             //ZONAS accesibles sólo para rol admin ***

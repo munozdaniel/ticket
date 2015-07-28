@@ -16,6 +16,12 @@ class Rol extends \Phalcon\Mvc\Model
     public $rol_descripcion;
 
     /**
+     *
+     * @var string
+     */
+    public $rol_nombre;
+
+    /**
      * Initialize method for model.
      */
     public function initialize()

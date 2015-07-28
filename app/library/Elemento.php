@@ -86,7 +86,7 @@ class Elemento extends Component
                 //Verificando que accion se encuentra activa.
                 $actionName = $this->view->getActionName();
                 $clase = (($item['accion']==$actionName)?"class=active":"");
-                
+
                 echo  "<ul class='sub'>";
                 echo  "<li $clase>".$this->tag->linkTo(array($item['controlador']."/".$item['accion'],$item['leyenda']))."</li>";
                 echo  "</ul>";
