@@ -30,6 +30,13 @@ class Elemento extends Component
             'accion'    =>  'index',
             'icono'     =>  'fa fa-dashboard'
         ),
+        'haberes' =>  array(
+            'leyenda'   =>  'Haberes',
+            'icono'     =>  'fa fa-database',
+            'submenu'   =>  array(
+                'Actualizar' =>  array('leyenda'=>'Actualizar Haberes','controlador'=>'haberes','accion'=>'index')
+            )
+        ),
         'ticket'    =>  array(
             'leyenda'   =>  'Ticket',
             'icono'     =>  'fa fa-desktop',
