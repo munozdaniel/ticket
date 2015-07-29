@@ -18,6 +18,7 @@ return new \Phalcon\Config(array(
         'viewsDir'       => APP_PATH . '/app/views/',
         'pluginsDir'     => APP_PATH . '/app/plugins/',
         'libraryDir'     => APP_PATH . '/app/library/',
+        'formulariosDir' => APP_PATH . '/app/formularios/',
         'cacheDir'       => APP_PATH . '/app/cache/',
         'baseUri'        => '/ticket/',
     )
