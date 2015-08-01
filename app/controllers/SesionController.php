@@ -40,7 +40,7 @@ class SesionController extends ControllerBase
                 {
                     $this->_registrarSesion($usuario);
                     $miSesion = $this->session->get('auth');
-                    $this->flash->success('Bienvenido '.$miSesion['usuario_nombre']);
+                    $this->flash->success('Bienvenido/a '.$miSesion['usuario_nombre'] . " - Rol: ".$miSesion['rol_nombre']);
                     //Redireccionar la ejecución si el usuario es valido
                     return $this->redireccionar('index/index');
 
@@ -67,7 +67,7 @@ class SesionController extends ControllerBase
         $this->session->set('auth',array('usuario_id'   =>  $usuario->usuario_id,
                                         'usuario_nombre'  =>  $usuario->usuario_nombre,
                                         'usuario_nick'  =>  $usuario->usuario_nick,
-                                        'rol_descripcion'   =>  $rol->rol_descripcion));
+                                        'rol_nombre'   =>  $rol->rol_nombre));
     }
     /**
      * Finishes the active session redirecting to the index
