@@ -10,16 +10,16 @@
                 {{ date_field("fecha", "size": 32) }}
             </div>
             <div class="form-group">
-                <label for="fileIml" class="col-sm-2 col-sm-2 control-label">ARCHIVO IML</label>
-                {{ file_field("fileIml[]") }}
+                <label for="file" class="col-sm-2 col-sm-2 control-label">ARCHIVO IML</label>
+                {{ file_field("archivo[]") }}
             </div>
             <div class="form-group">
-                <label for="fileImps" class="col-sm-2 col-sm-2 control-label">ARCHIVO IMPS</label>
-                {{ file_field("fileImps[]") }}
+                <label for="file" class="col-sm-2 col-sm-2 control-label">ARCHIVO IMPS</label>
+                {{ file_field("archivo[]") }}
             </div>
             <div class="form-group">
-                <label for="fileSac" class="col-sm-2 col-sm-2 control-label">ARCHIVO SAC</label>
-                {{ file_field("fileSac[]") }}
+                <label for="file" class="col-sm-2 col-sm-2 control-label">ARCHIVO SAC</label>
+                {{ file_field("archivo[]") }}
             </div>
             <div class="form-group ">
 
@@ -36,7 +36,17 @@
                     </label>
                 </div>
             </div>
+            <! -- ANIMATED PROGRESS BARS -->
+            <div class="showback">
+                <h4><i class="fa fa-angle-right"></i> Animated Progress Bars</h4>
+                <div class="progress progress-striped active">
+                    <div class="bar progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <span class="sr-only">45% Complete</span>
+                        <div class="percent">0%</div >
 
+                    </div>
+                </div>
+            </div><!-- /showback -->
             <div class="form-group ">
                 {{ submit_button("Cargar Datos", "class": "btn btn-primary col-sm-4 col-sm-offset-1") }}
             </div>

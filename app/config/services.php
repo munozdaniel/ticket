@@ -100,3 +100,24 @@ $di->set('flash', function()
 $di->set('componentes', function(){
     return new Elemento();
 });
+
+/**
+ * Registramos el gestor de eventos (Utilizado en plugins/Seguridad.php)
+ */
+$di->set('dispatcher', function() use ($di)
+{
+
+    $eventsManager = $di->getShared('eventsManager');
+
+    $roles = new Seguridad($di);
+
+    /**
+     * Escuchamos eventos en el componente dispatcher usando el plugin Roles
+     */
+    $eventsManager->attach('dispatch', $roles);
+
+    $dispatcher = new Phalcon\Mvc\Dispatcher();
+    $dispatcher->setEventsManager($eventsManager);
+
+    return $dispatcher;
+});

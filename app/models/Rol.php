@@ -13,19 +13,20 @@ class Rol extends \Phalcon\Mvc\Model
      *
      * @var string
      */
-    public $rol_descripcion;
+    public $rol_nombre;
 
     /**
      *
      * @var string
      */
-    public $rol_nombre;
+    public $rol_descripcion;
 
     /**
      * Initialize method for model.
      */
     public function initialize()
     {
+        $this->hasMany('rol_id', 'Acceso', 'rol_id', array('alias' => 'Acceso'));
         $this->hasMany('rol_id', 'Usuarioporrol', 'rol_id', array('alias' => 'Usuarioporrol'));
     }
 

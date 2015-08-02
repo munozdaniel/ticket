@@ -61,6 +61,7 @@ class SesionController extends ControllerBase
     }
     private function _registrarSesion($usuario)
     {
+
         $idRol = Usuarioporrol::findFirst(array("usuario_id     =       :usuario:",
                                                 'bind'          =>      array('usuario'=>$usuario->usuario_id)));
         $rol = Rol::findFirstByRolId($idRol->rol_id);
